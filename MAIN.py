@@ -1,5 +1,5 @@
 def input():
-    with open("a_an_example.in.txt", "r") as file:
+    with open("C:/Users/Geoffrey/Documents/PROGRAMS/HASHCODE/a_an_example.in.txt", "r") as file:
         data = file.readlines()
         x=0
         c,p = data[x].split()
@@ -8,8 +8,16 @@ def input():
         contributors = []
         for i in range(c):
             name,skills = data[x].split()
-            contributors.append(dict([name,-1]))
-            for i in range(skills):
+            x+=1;
+            contributors.append({name:[]})
+            for k in range(int(skills)):
+                skillname,skillpts = data[x].split()
+                contributors[i][name].append([skillname,int(skillpts)])
+                x+=1;
+        # print(contributors)
+        
+                
+                
                 
                 
                 
